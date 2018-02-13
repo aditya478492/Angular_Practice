@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Enter Character/Name : <input style="border: double" type="text" ng-model="search">
+<table class="table table-hover">
+    <tr style="border: double">
+        <td style="font-family:cursive">Character</td>
+        <td style="font-family:cursive">Name</td>
+    </tr>
+    <tr ng-repeat="actor in avengers|filter:search">
+        <td>{{actor.character|uppercase}}</td>
+        <td>{{actor.name|lowercase}}</td>
+    </tr>
+</table>
+</body>
+</html>

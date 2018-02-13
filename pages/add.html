@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="newdiv" ng-controller="dt">
+<form name="myform">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-king"></i></span>
+        <input type="text" class="colx"  placeholder="Email" name="email" ng-model="email" ng-required="true" ng-minlength="4">
+        <span class="alert" ng-show="myform.email.$error.minlength">Minimum 4 letters</span>
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-sunglasses"></i></span>
+        <input type="text" class="colx"  placeholder="Password" name="psd" ng-model="psd" ng-minlength="5">
+        <span class="alert" ng-show="myform.psd.$error.minlength">Minimum 5 letters</span>
+    </div><br>
+    <button type="button" ng-click="signin($event)" class="btn btn-success">Submit</button>
+</form>
+    </div>>
+</body>
+</html>

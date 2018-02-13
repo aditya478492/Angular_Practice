@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en" >
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blog</title>
+
+</head>
+<body ng-app="myapp">
+<div class="outline">
+    <div class="index">
+        <div class="heading">
+            <i class="fa fa-cogs" aria-hidden="true" style="font-size:60px;position: absolute;margin-left:15px;margin-top:10px;color:darkslategrey;"></i>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-primary btn-lg">Home</button>
+            <button class="btn btn-primary btn-lg">Add Post</button>
+            <button class="btn btn-primary btn-lg">Applications</button>
+        </div>
+        <div class="weather"></div>
+    </div>
+    <div class="content" style="overflow: scroll;">
+        <select name="country" ng-model="user.country">
+            <option value="">Please select a country from below:</option>
+            <option value="IND">India</option>
+            <option value="China">China</option>
+            <option value="Canada">Canada</option>
+            <option value="US">US</option>
+        </select>
+        <p>{{user.country}}</p>
+        <input type="radio" ng-model="user.choice" value="Coffee">Coffee
+        <input type="radio"  ng-model="user.choice" value="Tea">Tea
+        <p>{{user.choice}}</p>
+
+        ========================================================================================
+       <ng-view>
+
+       </ng-view>
+    </div>
+    <div class="extra">
+        <ul>
+            <li><a href="#!view1">Actor Search</a></li>
+            <li><a href="#!view2">v2</a></li>
+            <li><a href="#!Add">Add</a></li>
+            <li><a href="#!display">display</a></li>
+        </ul>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+<script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+</body>
+</html>
